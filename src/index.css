@@ -4,3 +4,20 @@
     margin: auto;
     margin-top: 6rem;
 }
+
+table th {
+    font-weight: bold;
+}
+
+.total,
+.amount {
+    font-weight: bold;
+}
+
+.category{
+    margin-right: auto;
+}
+
+#delete-btn {
+    margin-left: 40px;
+}
