@@ -1,6 +1,7 @@
-import { useState } from "react"
-import ExpenseForm from "./components/ExpenseForm"
-import ExpenseList from "./components/ExpenseList"
+import { useState } from "react";
+import ExpenseForm from "./components/ExpenseForm";
+import ExpenseList from "./components/ExpenseList";
+import ExpenseFilter from "./components/ExpenseFilter";
 function App() {
   const [exprenses,setExpenses] = useState(
     [
@@ -13,6 +14,7 @@ function App() {
     <>
     <ExpenseForm/>
     <ExpenseList expenses={exprenses} onDelete={(id)=> setExpenses(exprenses.filter((el)=> el.id !== id))}/>
+    <ExpenseFilter/>
     </>
   )
 }
