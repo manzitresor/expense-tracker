@@ -38,7 +38,7 @@ export default function ExpenseList({expenses,onDelete}: Props) {
           <tfoot>
             <tr>
               <td className="total">Total</td>
-              <td className="amount">${expenses.reduce((acc,expense) => expense.amount + acc,0)}</td>
+              <td className="amount">${expenses.reduce((acc,expense) => expense.amount + acc,0).toFixed(2)}</td>
             </tr>
           </tfoot>
         </table> 

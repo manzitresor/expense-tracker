@@ -2,6 +2,12 @@ import { useState } from "react";
 import ExpenseForm from "./components/ExpenseForm";
 import ExpenseList from "./components/ExpenseList";
 import ExpenseFilter from "./components/ExpenseFilter";
+
+
+
+
+
+
 function App() {
   const [selectedExpense,setSelectedExpense] = useState('')
   const [expenses,setExpenses] = useState(
@@ -12,9 +18,12 @@ function App() {
     ]
   )
   const visibility = selectedExpense ? expenses.filter((expense => expense.category === selectedExpense)): expenses
+
   return (
     <>
+    <div className="mb-5">
       <ExpenseForm/>
+    </div>
       <div className="mb-3">
         <ExpenseFilter onSelect={(category)=> setSelectedExpense(category)}/>
       </div>
